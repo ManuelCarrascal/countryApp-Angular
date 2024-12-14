@@ -1,0 +1,40 @@
+<aside class="sidebar">
+  <header class="sidebar__header">
+    <h2 class="sidebar__title">Countries</h2>
+  </header>
+
+  <hr class="divider" />
+
+  <nav class="sidebar__nav">
+    <ul class="sidebar__list">
+      <div>
+        <li
+          class="sidebar__list-item"
+          routerLink="by-capital"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          By Capital
+        </li>
+      </div>
+      <div>
+        <li
+          class="sidebar__list-item"
+          routerLink="by-country"
+          routerLinkActive="active"
+        >
+          By Country
+        </li>
+      </div>
+      <div>
+        <li
+          class="sidebar__list-item"
+          routerLink="by-region"
+          routerLinkActive="active"
+        >
+          By Region
+        </li>
+      </div>
+    </ul>
+  </nav>
+</aside>

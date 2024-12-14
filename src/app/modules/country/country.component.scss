@@ -1,0 +1,48 @@
+@use "helpers/helpers-dir" as *;
+
+.header {
+  &__title {
+    font-size: 3rem;
+  }
+}
+
+.country-info {
+  &__image {
+    border-radius: 2rem;
+    height: 38rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__translations {
+    border-top: 0.085rem solid $secondary-color-table;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+.tags{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.tag{
+    background-color:transparent;
+    border-radius: 0.5rem;
+    border:  0.085rem solid $secondary-color-table;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+
+    &:hover{
+        background-color: $secondary-color-table;
+    }
+}

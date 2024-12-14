@@ -1,0 +1,20 @@
+<h2>By Region</h2>
+<hr class="divider" />
+<div>
+  <div class="regions">
+    <button
+    class="btn"
+      *ngFor="let region of regions"
+      (click)="searchByRegion(region)"
+      [ngClass]="{'btn--active': region === selectedRegion}"
+    >
+      {{ region }}
+    </button>
+  </div>
+</div>
+
+<div>
+  <div>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>

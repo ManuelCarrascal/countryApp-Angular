@@ -1,0 +1,18 @@
+<h2>By Capital</h2>
+<hr class="divider" />
+<div>
+  <div>
+    <app-search-box
+      placeholder="Enters a country's capital"
+      (onDebounce)="searchByCapital($event)"
+      [initialValue]="initialValue"
+    ></app-search-box>
+  </div>
+</div>
+
+<div>
+  <div>
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>

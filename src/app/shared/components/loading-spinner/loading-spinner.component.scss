@@ -1,0 +1,76 @@
+.spinner-container {
+  align-items: center;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1.5rem;
+
+  &__loader {
+    border-radius: 20px;
+    border: 0.2rem solid #fff;
+    box-sizing: border-box;
+    display: block;
+    height: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    width: 5rem;
+  }
+
+  &__loader:before {
+    animation: ballbns 3s ease-in-out infinite;
+    background: #fff;
+    border-radius: 50%;
+    bottom: 0;
+    content: "";
+    height: 0.8rem;
+    left: 0;
+    position: absolute;
+    width: 1rem;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+@keyframes ballbns {
+  0% {
+    left: 0;
+    transform: translateX(0%);
+    box-shadow: -0.5rem 0 0 -0.1rem rgba(255, 255, 255, 0.9),
+      -1rem 0 0 -0.2rem rgba(255, 255, 255, 0.8),
+      -1.5rem 0 0 -0.4rem rgba(255, 255, 255, 0.6),
+      -2rem 0 0 -0.6rem rgba(255, 255, 255, 0.4),
+      -2.5rem 0 0 -0.8rem rgba(255, 255, 255, 0.2);
+  }
+  49% {
+    left: 100%;
+    transform: translateX(-100%);
+    box-shadow: -0.5rem 0 0 -0.1rem rgba(255, 255, 255, 0.9),
+      -1rem 0 0 -0.2rem rgba(255, 255, 255, 0.8),
+      -1.5rem 0 0 -0.4rem rgba(255, 255, 255, 0.6),
+      -2rem 0 0 -0.6rem rgba(255, 255, 255, 0.4),
+      -2.5rem 0 0 -0.8rem rgba(255, 255, 255, 0.2);
+  }
+  51% {
+    left: 100%;
+    transform: translateX(-100%);
+    box-shadow: 0.5rem 0 0 -0.1rem rgba(255, 255, 255, 0.9),
+      1rem 0 0 -0.2rem rgba(255, 255, 255, 0.8),
+      1.5rem 0 0 -0.4rem rgba(255, 255, 255, 0.6),
+      2rem 0 0 -0.6rem rgba(255, 255, 255, 0.4),
+      2.5rem 0 0 -0.8rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    left: 0;
+    transform: translateX(0%);
+    box-shadow: 0.5rem 0 0 -0.1rem rgba(255, 255, 255, 0.9),
+      1rem 0 0 -0.2rem rgba(255, 255, 255, 0.8),
+      1.5rem 0 0 -0.4rem rgba(255, 255, 255, 0.6),
+      2rem 0 0 -0.6rem rgba(255, 255, 255, 0.4),
+      2.5rem 0 0 -0.8rem rgba(255, 255, 255, 0.2);
+  }
+}

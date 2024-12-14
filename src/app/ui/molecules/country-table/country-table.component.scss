@@ -1,0 +1,104 @@
+@use "helpers/helpers-dir" as *;
+
+.container-table {
+  background-color: $background-color-secondary;
+  border-radius: 1rem;
+  border: 0.085rem solid #27272a;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  padding: 2rem;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0 0.1rem;
+  padding: 0 3rem 3rem 3rem;
+  width: 100%;
+
+  &__no-countries {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    gap: 2rem;
+    height: 80dvh;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__no-countries-title {
+    font-size: 4rem;
+  }
+
+  &__no-countries-image {
+    aspect-ratio: 16/9;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  &__header-row {
+    display: table-row;
+    width: 100%;
+    &:hover {
+      background-color: $background-color;
+    }
+  }
+
+  &__header-cell {
+    border-bottom: 0.085rem solid #27272a;
+    color: $secondary-color-table;
+    display: table-cell;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  &__header-cell--center {
+    text-align: center;
+  }
+
+  &__body {
+    display: table-row-group;
+  }
+
+  &__body-row {
+    display: table-row;
+    border-bottom: 0.085rem solid #27272a;
+
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      background-color: $background-color;
+    }
+  }
+
+  &__body-cell {
+    display: table-cell;
+    padding: 1.6rem;
+  }
+
+  &__body-cell--center {
+    text-align: center;
+  }
+
+  &__image {
+    aspect-ratio: 16/9;
+    height: 2.4rem;
+    object-fit: contain;
+    width: 4rem;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: $secondary-color-table;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "helpers/helpers-dir" as *;
+
+.search-box {
+  background-color: transparent;
+  border-radius: 0.6rem;
+  border: 0.0855rem solid $secondary-color;
+  color: $primary-color;
+  margin: 0.5rem 0;
+  outline: none;
+  padding: 0.8rem 1.2rem;
+
+  &:focus {
+    outline: 0.2rem solid gray;
+  }
+}

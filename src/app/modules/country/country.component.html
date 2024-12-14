@@ -1,0 +1,53 @@
+<ng-template #loading>
+  <div>consulted for you, please wait</div>
+</ng-template>
+
+<div *ngIf="country; else loading">
+  <header class="header">
+      <h2 class="header__title">
+       {{ country.name.common }}
+      </h2>
+      <hr class="divider" />
+  </header>
+  <section class="country-info">
+      <img class="country-info__image" [src]="country.flags.svg" [alt]="country.name.common"  />
+    <div class="country-info__details">
+      <div>
+        <p >
+          Population: {{ country.population | number }}
+        </p>
+        <p>
+          Capital: {{ country.capital }}
+        </p>
+        <p>
+          Area: {{ country.area | number }} km<sup>2</sup>
+        </p>
+       
+      </div>
+      <div>
+        <p>{{country.flag}}</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="country-info__translations">
+      <h3>Traducciones</h3>
+      <div class="tags">
+        <span class="tag">
+          {{ country.translations["spa"].common }}
+        </span>
+        <span class="tag">
+          {{ country.translations["ara"].common }}
+        </span>
+        <span class="tag">
+          {{ country.translations["por"].common }}
+        </span>
+        <span class="tag">
+          {{ country.translations["fra"].common }}
+        </span>
+        <span class="tag">
+          {{ country.translations["nld"].common }}
+        </span>
+      </div>
+    </div>
+</div>

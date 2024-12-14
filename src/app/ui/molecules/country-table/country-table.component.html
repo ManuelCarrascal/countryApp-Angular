@@ -1,0 +1,58 @@
+<div *ngIf="countries.length === 0; else table" class="table__no-countries"><p class="table__no-countries-title">
+  there are no countries
+</p>
+  <img class="table__no-countries-img" src="./Search.svg" alt="search_img" width="500" height="300">
+</div>
+
+<ng-template #table>
+  <div class="container-table">
+    <h3 class="title">Search results</h3>
+    <table class="table">
+      <thead class="table__header">
+        <tr class="table__header-row">
+          <th class="table__header-cell">#</th>
+          <th class="table__header-cell table__header-cell--center">ISO Code</th>
+          <th class="table__header-cell">Flag</th>
+          <th class="table__header-cell">Name</th>
+          <th class="table__header-cell">Capital</th>
+          <th class="table__header-cell">Population</th>
+          <th class="table__header-cell"></th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <tr
+          class="table__body-row"
+          *ngFor="let country of countries; let i = index"
+        >
+          <td class="table__body-cell">{{ i + 1 }}</td>
+          <td class="table__body-cell table__body-cell--center">{{ country.flag }}</td>
+          <td class="table__body-cell">
+            <img
+              class="table__image"
+              [src]="country.flags.svg"
+              [alt]="country.name.common"
+              width="4rem"
+              height="2.4rem"
+            />
+          </td>
+          <td class="table__body-cell">
+            {{ country.name.common }}
+          </td>
+          <td class="table__body-cell">
+            {{ country.capital }}
+          </td>
+          <td class="table__body-cell">
+            {{ country.population | number }}
+          </td>
+          <td class="table__body-cell">
+            <a
+              class="table__link"
+              [routerLink]="['/countries/by', country.cca3]"
+              >See more</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
